@@ -27,7 +27,7 @@ console.log(numeroComoTexto)
 console.log(typeof(numero))
 console.log(typeof(numeroComoTexto))
 
-// Crie uma variável com uma string e utilize métodos de manipulação de strings, como toUpperCase, toLowerCase, slice ou outros, para modificar a string original. Exiba os resultados finais no console.
+console.log('\nCrie uma variável com uma string e utilize métodos de manipulação de strings, como toUpperCase, toLowerCase, slice ou outros, para modificar a string original. Exiba os resultados finais no console.')
 const texto = 'Palmeiras não tem mundial!'
 console.log(texto)
 console.log(texto.toUpperCase())
