@@ -11,5 +11,6 @@
     - alterer no arquivo package.json o script dev para executar com o nodemom
 - instale a framework Express com o comando: npm install express
 - crie a pasta src
-- dentro da pasta src crie o arquivo app.js que será o nosso main
-- crie rotas em um arquivo separado chamado routes.js
+- dentro da pasta src crie o arquivo app.js que tera as nossas rotas
+- neste arquivo, importe o express
+- crie a const livros que será nosso banco de dados em memória
