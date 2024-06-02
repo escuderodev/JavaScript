@@ -15,7 +15,14 @@
 - neste arquivo, importe o express
 - crie a const livros que será nosso banco de dados em memória
 - ver passos de conexão em "DataBase MongoDB"
-- 
+- instalar a lib dotenv responsável por criar variáveis de ambiente: npm install dotenv
+- criar o arquivo .env na raiz do projeto
+- inserir neste arquivo todas as variáveis de ambiente desejadas
+- inserir o nome deste arquivo no .gitignore
+- carregar o arquivo .env no arquivo server.js (primeiro arquivo carregado pela aplicação)
+    - import "dotenv/config";
+- ajustar o código com as variáveis de ambiente
+    - process.env.DB_STRING_CONNECTION
 
 ## DataBase MongoDB
 - criar o database no mongdb atlas

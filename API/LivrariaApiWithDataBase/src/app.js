@@ -1,10 +1,12 @@
 import express from "express";
 import conectaDB from "./config/dbConnect.js";
+import livro from "./models/Livro.js"
 
 const conexao = await conectaDB();
 conexao.on("error", (erro) => {
     console.error("Erro de conexão!", erro);
 });
+
 conexao.once("open", () => {
     console.log("Conexão realizada com sucesso!");
 });
@@ -12,17 +14,12 @@ conexao.once("open", () => {
 const app = express();
 app.use(express.json());
 
-function buscarLivroPorId(id) {
-    return livros.findIndex(livro => {
-        return livro.id === Number(id);
-    })
-}
-
 app.get("/", (req, res) => {
     res.status(200).send("Criando uma API com Node.js");
 });
 
-app.get("/livros", (req, res) => {
+app.get("/livros", async (req, res) => {
+    const livros = await livro.find({});
     res.status(200).send(livros);
 });
 

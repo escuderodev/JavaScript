@@ -1,7 +1,7 @@
 import mongoose, { mongo } from "mongoose"
 
 async function conectaDB() {
-    mongoose.connect("mongodb+srv://escuderodev:1403@escuderodev.gaumr0y.mongodb.net/livraria?retryWrites=true&w=majority&appName=escuderodev");
+    mongoose.connect(process.env.DB_STRING_CONNECTION);
 
     return mongoose.connection;
 }
