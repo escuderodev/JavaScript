@@ -23,6 +23,12 @@
     - import "dotenv/config";
 - ajustar o código com as variáveis de ambiente
     - process.env.DB_STRING_CONNECTION
+- refatorar o código
+    - criar controller
+    - criar routes
+- criar arquivo de entrada em routes chamado index.js
+- sempre que criar um método no controller, devemos atualizar o endpoint correspondente no arquivo routes (livrosRoutes.js)
+    - implementação dos métodos no controler e chamada dos métodos no routes
 
 ## DataBase MongoDB
 - criar o database no mongdb atlas
