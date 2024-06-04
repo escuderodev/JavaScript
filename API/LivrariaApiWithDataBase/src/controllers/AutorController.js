@@ -1,4 +1,4 @@
-import {autor} from "../models/Livro.js";
+import { autor } from "../models/Autor.js";
 
 class AutorController {
 
@@ -27,7 +27,7 @@ class AutorController {
 
     static async create(req, res) {
         try {
-            const newBook = await autor.create(req.body);
+            const newAuthor = await autor.create(req.body);
             res.status(201).json({
                 message: "Autor criado com sucesso!",
                 autor: newAuthor
