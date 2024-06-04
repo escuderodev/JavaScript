@@ -29,6 +29,11 @@
 - criar arquivo de entrada em routes chamado index.js
 - sempre que criar um método no controller, devemos atualizar o endpoint correspondente no arquivo routes (livrosRoutes.js)
     - implementação dos métodos no controler e chamada dos métodos no routes
+- criar o model Autor
+- criar o AutorController
+- criar o autoresRoutes
+- no arquivo de entrada das rotas (index.js) devemos importar também as rotas de Autor, bem como ajustar a exportação
+
 
 ## DataBase MongoDB
 - criar o database no mongdb atlas
