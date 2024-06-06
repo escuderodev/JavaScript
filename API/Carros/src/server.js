@@ -5,11 +5,11 @@ const bodyParser = require('body-parser'); //permite converter o body para diver
 
 const routes = require('./routes'); //apontamento para o arquivo de routes
 
-const server = express(); //instãncia do express
+const server = express(); //instância do express
 server.use(cors());
 server.use(bodyParser.urlencoded({extended: false}));
 server.use('/api', routes)
 
 server.listen(process.env.PORT, () => {
     console.log(`Server rodando em: http://localhost:${process.env.PORT}`);
-})
+});

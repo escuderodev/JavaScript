@@ -7,4 +7,14 @@
 - em src, criar server.js
 - configurar npm run dev com nodemon
 - em src, criar arquivo routes.js
+- em src, criar pasta controllers
+- criar controller para a entidade
+- importar o Controller no arquivo routes
+- em src, criar pasta services
+- em services, criar o service da entidade
+- importar no controller o service
+- no banco de dados mysql, criar o database
+- no banco de dados mysql, criar a tabela referente a entidade
+- criar arquivo db.js
+- em db.js, configurar a conexão com o banco de dados
 - 
