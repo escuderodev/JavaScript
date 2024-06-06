@@ -9,6 +9,7 @@ module.exports = {
             });
         });
     },
+
     findById: (id) => {
         return new Promise((aceito, rejeitado) => {
             db.query('select * from carros where codigo = ?', [id], (error, results) => {
@@ -18,6 +19,16 @@ module.exports = {
                 } else {
                     aceito(false);
                 }
+            });
+        });
+    },
+
+    create: (modelo, placa) => {
+        return new Promise((aceito, rejeitado) => {
+            db.query('insert into carros (modelo, placa) values (?, ?)', [modelo, placa], (error, results) => {
+                if(error) {rejeitado(error); return;}
+                aceito(results.insertId);
+                
             });
         });
     }
