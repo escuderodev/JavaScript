@@ -28,7 +28,7 @@ module.exports = {
             db.query('insert into carros (modelo, placa) values (?, ?)', [modelo, placa], (error, results) => {
                 if(error) {rejeitado(error); return;}
                 aceito(results.insertId);
-                
+
             });
         });
     }
