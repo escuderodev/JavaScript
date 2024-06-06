@@ -17,4 +17,6 @@
 - no banco de dados mysql, criar a tabela referente a entidade
 - criar arquivo db.js
 - em db.js, configurar a conexão com o banco de dados
+- em routes, criar a rota get 
+- em controller, criar método findAll
 - 
