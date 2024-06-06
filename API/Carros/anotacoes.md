@@ -19,4 +19,4 @@
 - em db.js, configurar a conexão com o banco de dados
 - em routes, criar a rota get 
 - em controller, criar método findAll
-- 
+- testar api - req tipo get
