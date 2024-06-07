@@ -17,6 +17,7 @@ module.exports = {
 
     findById: async (req, res) => {
         let json = {error:'', result:{}};
+
         let id = req.params.id;
         let carro = await CarroService.findById(id);
 
@@ -28,6 +29,7 @@ module.exports = {
 
     create: async (req, res) => {
         let json = {error:'', result:{}};
+
         let modelo = req.body.modelo;
         let placa = req.body.placa;
 
@@ -41,7 +43,26 @@ module.exports = {
         } else {
             json.error = 'Todos os campos são obrigatórios!'
         }
+        res.json(json);
+    },
 
+    update: async (req, res) => {
+        let json = {error:'', result:{}};
+
+        let id = req.body.id;
+        let modelo = req.body.modelo;
+        let placa = req.body.placa;
+
+        if(id && modelo && placa) {
+            let carro = await CarroService.update(id, modelo, placa);
+            json.result = {
+                id,
+                modelo,
+                placa
+            };
+        } else {
+            json.error = 'Todos os campos são obrigatórios!'
+        }
         res.json(json);
     }
 }
