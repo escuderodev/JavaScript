@@ -36,6 +36,7 @@ module.exports = {
         if(modelo && placa) {
             let carro = await CarroService.create(modelo, placa);
             json.result = {
+                message: 'Carro criado com sucesso!',
                 codigo: carro,
                 modelo,
                 placa
@@ -49,20 +50,30 @@ module.exports = {
     update: async (req, res) => {
         let json = {error:'', result:{}};
 
-        let id = req.body.id;
+        let id = req.params.id;
         let modelo = req.body.modelo;
         let placa = req.body.placa;
 
         if(id && modelo && placa) {
             let carro = await CarroService.update(id, modelo, placa);
             json.result = {
-                id,
+                message: "Carro atualizado com sucesso!",
+                codigo: Number(id),
                 modelo,
                 placa
             };
         } else {
             json.error = 'Todos os campos são obrigatórios!'
         }
-        res.json(json);
+        res.json(json)
+    },
+
+    delete: async (req, res) => {
+        let json = {error:'', result:{}};
+
+        let id = req.params.id;
+        await CarroService.delete(id);
+
+        res.status(200).send('Carro deletado com sucesso!');
     }
 }

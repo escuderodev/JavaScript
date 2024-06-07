@@ -41,5 +41,14 @@ module.exports = {
 
             });
         });
+    },
+
+    delete: (id) => {
+        return new Promise((aceito, rejeitado) => {
+            db.query('delete from carros where codigo = ?', [id], (error, results) => {
+                if(error) {rejeitado(error); return;}
+                aceito(results);
+            });
+        });
     }
 };
