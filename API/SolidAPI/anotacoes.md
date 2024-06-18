@@ -31,4 +31,14 @@
 - criar métodos de interação com o banco no repository
 - implementar DTO
 - criar código do useCase no arquivo class
-- 
+- devemos criar a pasta Providers sempre que houver a necessidade de se conectar com algum recurso externo
+- em providers, criar a arquivo responsável por consumir o recurso externo
+- no caso de uso, fazer uso do nosso provider
+- implementar controller
+- criar pasta Implementations dentro de repository e providers
+- instalar nodemailer => yarn add nodemailer
+- instalar tipagem nodemailer => yarn add @types/nodemailer -D
+- implementar provider
+- implementar repository
+- na pasta CreateUser que está em useCases, criar um arquivo index.ts para conectar a implementação do Postgres e MailTrap com as Interfaces
+- ajustar routes 
