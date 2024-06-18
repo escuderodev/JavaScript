@@ -23,4 +23,12 @@
 - criar as rotas
 - em app.ts, definir => app.use(router)
 - instalar uuidv4 => yarn add uuidv4
+- criar pasta useCases
+- dentro de useCases, criar pasta para cada caso de uso
+- criar dentro da pasta do caso de uso os arquivos class, controller, DTO e Spec
+- em src, criar pasta repository
+- criar arquivo repository
+- criar métodos de interação com o banco no repository
+- implementar DTO
+- criar código do useCase no arquivo class
 - 
