@@ -9,6 +9,10 @@ const dbInMemory = [
 
 export class ClientService {
 
+    findAll = () => {
+        return dbInMemory;
+    }
+
     createClient = (name: string, fone: string, email: string, restriction: string) => {
         const client = {
             name: name,

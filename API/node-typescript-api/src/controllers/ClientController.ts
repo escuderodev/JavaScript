@@ -4,6 +4,12 @@ import { ClientService } from "../services/ClientService";
 const clientService = new ClientService();
 
 export class ClientController {
+
+    findAll =  (req: Request, res: Response) => {
+        const clientList = clientService.findAll();
+        return res.status(200).json(clientList);
+    }
+    
     createClient = (req: Request, res: Response) => {
         const client = req.body;
 

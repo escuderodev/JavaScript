@@ -9,7 +9,9 @@ app.use(json());
 
 app.get("/", (req: Request, res: Response) => {
     return res.status(200).json({message: "Bem vindo a minha API..."});
-})
+});
+
+app.get("/client", clientController.findAll);
 
 app.post("/client", clientController.createClient);
 
