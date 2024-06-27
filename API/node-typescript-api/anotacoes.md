@@ -15,4 +15,11 @@
 - em package.json, criar o script start => "start": "node src/index.ts"
 - para executar a app em modo produção basta digitar no terminal => npm run start
 - obs: sempre que uma alterar for realizada nos arquivos .ts, antes de rodar em produção, devemos fazer o build
+- instalar a lib express => npm i express
+- instalar o type do express => npm i -D @types/express
+- em server.ts, importar e instanciar o express => const app = express();
+- em server.ts, definir a porta escutada => app.listen(5000, () => console.log("Server is running on http://localhost:5000"));
+- em server.ts, definir json como o padrão de dados recebidos no body => app.use(json());
+- em server.ts, criar rotas
+- testar API
 - 
