@@ -1,18 +1,9 @@
 import express, { json, Request, Response } from "express";
-import { ClientController } from "./controllers/ClientController";
-
-const clientController = new ClientController();
+import { router } from "./routes";
 
 const app = express();
 
 app.use(json());
-
-app.get("/", (req: Request, res: Response) => {
-    return res.status(200).json({message: "Bem vindo a minha API..."});
-});
-
-app.get("/client", clientController.findAll);
-
-app.post("/client", clientController.create);
+app.use(router);
 
 app.listen(5000, () => console.log("Server is running on http://localhost:5000"));

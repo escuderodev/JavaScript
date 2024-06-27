@@ -31,4 +31,7 @@
 - em ClientController, instanciar ClientService
 - em ClientController, no método createClient, importar o método createClient da ClientService
 - em src, criar arquivo routes.ts para receber as rotas/endpoints
+- em routes.ts, importar do express o Router
+- mover as rotas de server.ts para router.ts
+- em server.ts, importar o router e colocar em uso => app.use(router);
 - 
