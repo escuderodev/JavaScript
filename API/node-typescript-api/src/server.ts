@@ -13,6 +13,6 @@ app.get("/", (req: Request, res: Response) => {
 
 app.get("/client", clientController.findAll);
 
-app.post("/client", clientController.createClient);
+app.post("/client", clientController.create);
 
 app.listen(5000, () => console.log("Server is running on http://localhost:5000"));

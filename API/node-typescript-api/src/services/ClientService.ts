@@ -13,7 +13,7 @@ export class ClientService {
         return dbInMemory;
     }
 
-    createClient = (name: string, fone: string, email: string, restriction: string) => {
+    create = (name: string, fone: string, email: string, restriction: string) => {
         const client = {
             name: name,
             fone: fone,

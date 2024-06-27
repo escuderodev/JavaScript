@@ -30,4 +30,5 @@
 - criar método createClient
 - em ClientController, instanciar ClientService
 - em ClientController, no método createClient, importar o método createClient da ClientService
+- em src, criar arquivo routes.ts para receber as rotas/endpoints
 - 

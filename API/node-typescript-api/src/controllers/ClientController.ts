@@ -10,7 +10,7 @@ export class ClientController {
         return res.status(200).json(clientList);
     }
     
-    createClient = (req: Request, res: Response) => {
+    create = (req: Request, res: Response) => {
         const client = req.body;
 
         if(!client.name) {
@@ -23,7 +23,7 @@ export class ClientController {
             return res.status(400).json({message: 'Bad Request => The restriction field is required!'})
         }
 
-        clientService.createClient(client.name, client.fone, client.email, client.restriction);
+        clientService.create(client.name, client.fone, client.email, client.restriction);
         return res.status(201).json({message: "Cliente cadastrado com sucesso!",});
     }
 }
