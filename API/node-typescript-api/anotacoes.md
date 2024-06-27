@@ -22,4 +22,6 @@
 - em server.ts, definir json como o padrão de dados recebidos no body => app.use(json());
 - em server.ts, criar rotas
 - testar API
+- em src, criar pasta controller
+- em controller, criar ClientController.ts
 - 

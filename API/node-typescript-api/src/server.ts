@@ -1,4 +1,7 @@
 import express, { json, Request, Response } from "express";
+import { ClientController } from "./controllers/ClientController";
+
+const clientController = new ClientController();
 
 const app = express();
 
@@ -8,10 +11,6 @@ app.get("/", (req: Request, res: Response) => {
     return res.status(200).json({message: "Bem vindo a minha API..."});
 })
 
-app.post("/client", (req: Request, res: Response) => {
-    const body = req.body;
-    console.log(body);
-    return res.status(201).json({message: "Cliente cadastrado com sucesso!"});
-})
+app.post("/client", clientController.createClient);
 
 app.listen(5000, () => console.log("Server is running on http://localhost:5000"));
