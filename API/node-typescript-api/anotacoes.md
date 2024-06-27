@@ -24,4 +24,10 @@
 - testar API
 - em src, criar pasta controller
 - em controller, criar ClientController.ts
+- criar método createClient
+- criar pasta services
+- em services, criar ClientService.ts
+- criar método createClient
+- em ClientController, instanciar ClientService
+- em ClientController, no método createClient, importar o método createClient da ClientService
 - 
